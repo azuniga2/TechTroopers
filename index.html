@@ -21,25 +21,37 @@
         spot today!
       </p>
     </section>
+    <section id="filters">
+      <h2>Filter Events</h2>
 
-    <section id="current-events">
-      <h2>Current Events</h2>
-      <div class="event">
-        <h3>Concert: Rock Night</h3>
-        <p>Date: November 15, 2024</p>
-        <p>Location: Arena City Center</p>
-      </div>
-      <div class="event">
-        <h3>Sports: City Football Finals</h3>
-        <p>Date: December 2, 2024</p>
-        <p>Location: Stadium Park</p>
-      </div>
-      <div class="event">
-        <h3>Festival: Winter Fest</h3>
-        <p>Date: December 20-25, 2024</p>
-        <p>Location: Downtown Plaza</p>
-      </div>
+      <!-- Search Box -->
+      <label for="search">Search Events:</label>
+      <input type="text" id="search" placeholder="Search by event name..." />
+
+      <!-- Genre Filter -->
+      <label for="genre">Filter by Genre:</label>
+      <select id="genre">
+        <option value="">All Genres</option>
+        <option value="music">Music</option>
+        <option value="sports">Sports</option>
+        <option value="arts">Arts</option>
+        <option value="theater">Theater</option>
+        <option value="festivals">Festivals</option>
+      </select>
+
+      <button id="applyFilters">Apply Filters</button>
     </section>
+
+    <section id="current-events"></section>
+
+    <label for="city">Select a City:</label>
+    <select id="city">
+      <option value="las-cruces">Las Cruces, NM</option>
+      <option value="el-paso">El Paso, TX</option>
+      <option value="albuquerque">Albuquerque, NM</option>
+    </select>
+    <button id="fetch-events">Show Events</button>
+    <div id="pagination"></div>
 
     <section id="event-info">
       <h2>About Our Events</h2>
@@ -51,43 +63,9 @@
       </p>
     </section>
 
-    <section id="payment-form">
-      <h2>Book Your Ticket</h2>
-      <form>
-        <label for="event">Select Event:</label>
-        <select id="event" name="event">
-          <option value="rock-night">Rock Night</option>
-          <option value="football-finals">City Football Finals</option>
-          <option value="winter-fest">Winter Fest</option>
-        </select>
-
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="card">Credit Card Number:</label>
-        <input
-          type="text"
-          id="card"
-          name="card"
-          placeholder="XXXX-XXXX-XXXX-XXXX"
-          required
-        />
-
-        <label for="exp">Expiration Date:</label>
-        <input type="text" id="exp" name="exp" placeholder="MM/YY" required />
-
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" placeholder="XXX" required />
-
-        <button type="submit">Submit Payment</button>
-      </form>
-    </section>
-
     <footer>
       <p>&copy; 2024 ICT 435 - All Rights Reserved</p>
+      <script src="scripts.js"></script>
     </footer>
   </body>
 </html>
